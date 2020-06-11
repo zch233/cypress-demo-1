@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Actions', () => {
+describe('在 Google 上测试', () => {
   beforeEach(() => {
     cy.visit('https://www.google.com')
   })
