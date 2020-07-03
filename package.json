@@ -5,6 +5,9 @@
   "repository": "git@github.com:zch233/cypress-demo-1.git",
   "author": "zhangchao <529743595@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "cypress open"
+  },
   "devDependencies": {
     "cypress": "^4.8.0"
   }

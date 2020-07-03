@@ -1,14 +1,11 @@
 /// <reference types="cypress" />
 
-describe('在 Google 上测试', () => {
+context('Actions', () => {
   beforeEach(() => {
-    cy.visit('https://www.google.com')
+    cy.visit('https://element.eleme.cn/#/zh-CN/component/cascader')
   })
-
-  it('搜索 zch-ui', () => {
-    cy.get('.gLFyf')
-      .type('zch-ui{enter}')
-    cy.contains('zch-ui').should('exist')
-    cy.contains('@zch233').should('exist')
+  it('单选', () => {
+    cy.contains('单选选择任意一级选项').next().click()
+    cy.get('.el-cascader-menu__list').children().eq(0).click({force:true}) // 使用 force 无效果
   })
 })
